@@ -2,12 +2,7 @@
 #include <string>
 
 int main(int argc, char *argv[]) {
-    try {
-        std::string arg = argv[1];
-        if (arg == "fail")
-            return 1;
-    }
-    catch (...) {
-        return 2;
-    }
+    std::string arg = argv[argc-1];
+    if (arg == "fail")
+        return 1;
 }
