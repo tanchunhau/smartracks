@@ -16,7 +16,6 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    ls
-    cd /
-    ls
+    c++ hello.cpp -o hello
+    ./hello $(RUNARG)
   displayName: 'Run a multi-line script'
