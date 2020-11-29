@@ -1,7 +1,13 @@
 #include <iostream>
+#include <string>
 
 int main(int argc, char *argv[]) {
-    std::cout << argv[1] << std::endl;
-    return 1;
-    //return 0;
+    try {
+        std::string arg = argv[1];
+        if (arg == "fail")
+            return 1;
+    }
+    catch (...) {
+        return 2;
+    }
 }
