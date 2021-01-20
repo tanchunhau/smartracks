@@ -8,13 +8,13 @@ trigger:
 
 resources:
   containers:
-  - container: ni-smartracks-dev
+  - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracks:10
     options:
 
 jobs:
 - job: Build_OpenEmbedded
-  container: ni-smartracks-dev
+  container: smartracks-build
   timeoutInMinutes: 3600
   pool:
     name: Drivers-NIBuildFarm-RFMIBUILD
