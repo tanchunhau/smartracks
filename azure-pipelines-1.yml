@@ -9,7 +9,7 @@ trigger:
 resources:
   containers:
   - container: smartracks-build
-    image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
+    image: rnd-builds.repos.natinst.com/smartracks/smartracks:10
     options:
 
 jobs:
