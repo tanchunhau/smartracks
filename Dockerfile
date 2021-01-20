@@ -33,7 +33,7 @@ RUN 		mv ~/bin/repo /usr/local/bin/repo
 RUN		mkdir -p /home/oe-builder
 RUN 		chown ni-smartracks-dev /home/oe-builder
 
-#USER 		ni-smartracks-dev
+USER 		ni-smartracks-dev
 RUN 		git config --global user.name "tanchunhau"
 RUN		git config --global user.email tanchunhau@hotmail.com
 WORKDIR     	/home/oe-builder
