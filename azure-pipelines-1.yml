@@ -27,4 +27,4 @@ jobs:
   - script: |
       echo "Hello World1"
       cd /mnt
-      ls
+      echo "$(ls)"
