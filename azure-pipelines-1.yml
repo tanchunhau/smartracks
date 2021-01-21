@@ -22,4 +22,4 @@ jobs:
       echo "Hello World6"
       echo "--Here--"
       cd /mnt
-      ls -1
+      ls -l
