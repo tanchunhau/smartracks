@@ -11,11 +11,7 @@ resources:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
     options:
-  
-services:
-  volumes:
-        - /mnt:/mnt
-        
+         
 jobs:
 - job: Build_OpenEmbedded
   container: smartracks-build
