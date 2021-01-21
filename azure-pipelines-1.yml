@@ -10,12 +10,13 @@ resources:
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
+    volumes: 
+    -/mnt:/mnt
     options:
          
 jobs:
 - job: Build_OpenEmbedded
   container: smartracks-build
-     volumes: /mnt:/mnt
   timeoutInMinutes: 3600
   pool:
     name: Drivers-NIBuildFarm-RFMIBUILD
