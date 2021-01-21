@@ -10,8 +10,6 @@ resources:
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
-    volumes: 
-    -/mnt:/mnt
     options:
          
 jobs:
