@@ -25,6 +25,6 @@ jobs:
   - checkout: self
     submodules: true
   - script: |
-      echo "Hello World3"
+      echo "Hello World4"
       cd /mnt
-      ls -1 /mnt
+      ls -1
