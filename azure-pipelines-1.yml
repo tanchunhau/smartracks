@@ -21,14 +21,13 @@ jobs:
     demands:
       - docker
       - Agent.OS -equals Linux
+  volumes:
+      - /mnt:/mnt
   steps:
   - checkout: self
     submodules: true
   - script: |
-      echo "Hello World5"
-      repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
-      repo sync
-       . export
-       bitbake smartrack-minimal-image
-       echo "--Here--"
-       ls -1
+      echo "Hello World6"
+      echo "--Here--"
+      cd /mnt
+      ls -1
