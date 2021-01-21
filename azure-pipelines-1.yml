@@ -25,6 +25,7 @@ jobs:
   - checkout: self
     submodules: true
   - script: |
-      echo "Hello World4"
-      cd /mnt
-      ls -1
+      echo "Hello World5"
+      repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
+      repo sync
+       . export
