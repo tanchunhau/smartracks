@@ -11,7 +11,7 @@ resources:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
     options:
-    volumes: /mnt:/mnt:rw
+    volumes: /mnt/nirvana/perforceExports:/mnt:rw
          
 jobs:
 - job: Build_OpenEmbedded
