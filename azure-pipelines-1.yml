@@ -28,7 +28,8 @@ jobs:
   - checkout: self
     submodules: true
   - script: |
-      echo "Hello World7"
+      echo "Hello World8"
       echo "--Here--"
-      cd /mnt
+      cd /mnt/nirvana/perforceExports/smartracks/
+      mkdir -p testing123
       ls -1
