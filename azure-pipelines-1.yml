@@ -9,7 +9,6 @@ trigger:
          
 jobs:
 - job: Build_OpenEmbedded
-  container: smartracks-build
   timeoutInMinutes: 3600
   pool:
     name: Drivers-NIBuildFarm-RFMIBUILD
