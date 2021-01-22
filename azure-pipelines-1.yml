@@ -11,7 +11,8 @@ schedules:
   displayName: 'Daily build'
   branches:
     include:
-
+     - main
+     
 resources:
   containers:
   - container: smartracks-build
