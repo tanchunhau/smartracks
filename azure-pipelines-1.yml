@@ -31,5 +31,5 @@ jobs:
       echo "Hello World8"
       echo "--Here--"
       cd /mnt/nirvana/perforceExports/smartracks/
-      mkdir -p testing123
+      mkdir -p $(Build.BuildNumber)
       ls -1
