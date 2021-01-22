@@ -6,6 +6,9 @@
 trigger:
 - main
 
+variables:
+  EXPORT_VERSION: 'build-$(Build.BuildNumber)'
+  
 resources:
   containers:
   - container: smartracks-build
@@ -28,8 +31,8 @@ jobs:
   - checkout: self
     submodules: true
   - script: |
-      echo "Hello World8"
+      echo "Hello World9"
       echo "--Here--"
-      cd /mnt/nirvana/perforceExports/smartracks/
-      mkdir -p $(Build.BuildNumber)
+      cd /mnt/nirvana/perforceExports/smartracks/testing123
+      mkdir -p EXPORT_VERSION
       ls -1
