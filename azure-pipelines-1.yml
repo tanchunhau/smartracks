@@ -9,7 +9,7 @@ trigger:
 
 
 schedules:
-- cron: "2 * * * *"
+- cron: "/2 * * * *"
   displayName: 'Daily build'
   branches:
     include:
