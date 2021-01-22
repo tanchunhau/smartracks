@@ -6,6 +6,10 @@
 trigger:
 - main
 
+schedules:
+- cron: "3 * * * *"
+  displayName: 'Daily build'
+
 resources:
   containers:
   - container: smartracks-build
@@ -28,8 +32,7 @@ jobs:
   - checkout: self
     submodules: true
   - script: |
-      echo "Hello World9"
-      echo "--Here--"
+      echo "--Here TCH--"
       cd /mnt/nirvana/perforceExports/smartracks/testing123
       mkdir -p build-$(Build.BuildNumber)
       ls -1
