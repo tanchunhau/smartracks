@@ -9,6 +9,8 @@ trigger:
 schedules:
 - cron: "3 * * * *"
   displayName: 'Daily build'
+  branches:
+    include:
 
 resources:
   containers:
