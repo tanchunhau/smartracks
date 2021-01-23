@@ -8,14 +8,17 @@ trigger:
 
 
 
-schedules:
-- cron: "0 * * * *"
-  displayName: 'Daily build'
-  branches:
-    include:
-     - main
+#schedules:
+#- cron: "0 * * * *"
+#  displayName: 'Daily build'
+#  branches:
+#    include:
+#     - main
      
 resources:
+  repositories:
+  - repository: git://github.com/NI-SmartRack/rcu-software.git;branch=main"
+    type: github
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
@@ -39,5 +42,5 @@ jobs:
   - script: |
       echo "--Here TCH--"
       cd /mnt/nirvana/perforceExports/smartracks/testing123
-      mkdir -p build-$(Build.BuildNumber)
+      # mkdir -p build-$(Build.BuildNumber)
       ls -1
