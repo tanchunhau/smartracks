@@ -20,7 +20,7 @@ resources:
   - repository: rcu-service
     type: github
     name: NI-SmartRack/rcu-service
-    endpoint: Github
+    endpoint: EttusResearch
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
