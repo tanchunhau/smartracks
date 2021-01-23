@@ -17,10 +17,11 @@ trigger:
      
 resources:
   repositories:
-  - repository: git://github.com/NI-SmartRack/rcu-software.git;
+  - repository: meta-smartrack
     type: github
-    name: RCU Service
+    name: ni/meta-smartrack
     ref: main
+    endpoint: ni
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
