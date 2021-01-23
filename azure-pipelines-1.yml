@@ -19,6 +19,7 @@ resources:
   repositories:
   - repository: git://github.com/NI-SmartRack/rcu-software.git;branch=main"
     type: github
+    name: RCU Service
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
