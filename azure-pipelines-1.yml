@@ -21,7 +21,6 @@ resources:
     type: github
     name: NI-SmartRack/rcu-service
     ref: main
-    endpoint: NI-SmartRack
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracksroot:0
