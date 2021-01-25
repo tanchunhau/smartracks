@@ -21,7 +21,7 @@ resources:
     type: github
     name: NI-SmartRack/rcu-service
     #endpoint: EttusResearch
-    endpoint: SmartRack
+    endpoint: SmartRacks
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracks-build:0
@@ -44,10 +44,10 @@ jobs:
     submodules: true
   - script: |
       echo "--Here TCH 2021--"
-      repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
-      repo sync
-       . export
-      bitbake smartrack-minimal-image
+      #repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
+      #repo sync
+      # . export
+      #bitbake smartrack-minimal-image
       cd /mnt/nirvana/perforceExports/smartracks/testing123
       # mkdir -p build-$(Build.BuildNumber)
       ls -1
