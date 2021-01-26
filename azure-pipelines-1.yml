@@ -48,13 +48,13 @@ jobs:
   steps:
   - checkout: self
     submodules: true
- # - checkout: smartracks-manifest
+  - checkout: smartracks-manifest
   - script: |
       echo "--Here TCH 2021--"
       #repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
       #repo sync
        #. export
       #bitbake smartrack-minimal-image
-      cd /mnt/nirvana/perforceExports/smartracks/testing123
+      #cd /mnt/nirvana/perforceExports/smartracks/testing123
       # mkdir -p build-$(Build.BuildNumber)
       ls -1
