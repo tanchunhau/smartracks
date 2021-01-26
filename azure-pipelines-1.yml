@@ -53,8 +53,8 @@ jobs:
       echo "--Here TCH 20--"
       ls -1
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      cp smartracks-manifest/smartracks-manifest.xml .repo/local_manifest.xml
-      #repo init -u /smartracks-manifest/smartracks-manifest.xml
+      #cp smartracks-manifest/smartracks-manifest.xml .repo/local_manifest.xml
+      repo init -m /smartracks-manifest/smartracks-manifest.xml
       echo "--1--"
       ls -1
       repo sync
