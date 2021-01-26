@@ -52,7 +52,7 @@ jobs:
   - script: |
       echo "--Here TCH 2021--"
       ls -1
-      repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
+      repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
       repo sync
       echo "--a--"
       ls -1
