@@ -24,7 +24,10 @@ resources:
     type: github
     name: NI-SmartRack/rcu-service
     endpoint: SmartRacks
-
+  - repository: smartracks-manifest
+    type: github
+    name: ni/smartracks-manifest
+    endpoint: SmartRacks
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracks-build:0
