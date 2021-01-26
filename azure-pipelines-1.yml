@@ -55,7 +55,9 @@ jobs:
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cp smartracks-manifest/smartracks-manifest.xml .repo/local_manifest.xml
       cd smartracks-manifest
-      repo init -m smartracks-manifest.xml
+      git init
+      git add smartracks-manifest.xml
+      #repo init -m smartracks-manifest.xml
       
       echo "--1--"
       ls -1
