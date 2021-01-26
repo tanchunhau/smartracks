@@ -23,7 +23,10 @@ resources:
   - repository: rcu-service
     type: github
     name: NI-SmartRack/rcu-service
-    #endpoint: EttusResearch
+    endpoint: SmartRacks
+  - repository: meta-smartracks
+    type: github
+    name: ni/meta-smartracks
     endpoint: SmartRacks
   containers:
   - container: smartracks-build
