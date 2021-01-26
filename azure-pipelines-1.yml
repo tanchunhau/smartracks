@@ -52,10 +52,8 @@ jobs:
   - script: |
       echo "--Here TCH 2021--"
       ls -1
-      cd smartracks-manifest
-       echo "--0--"
-      ls -1
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
+      repo init -u /smartracks-manifest/smartracks-manifest.xml
       echo "--1--"
       ls -1
       repo sync
