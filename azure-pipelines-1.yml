@@ -51,10 +51,16 @@ jobs:
   - checkout: smartracks-manifest
   - script: |
       echo "--Here TCH 2021--"
-      #repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
+      ls -1
+      repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
       repo sync
+      echo "--a--"
+      ls -1
+      
       . export
+      echo "--b--"
+      ls -1
       #bitbake smartrack-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       # mkdir -p build-$(Build.BuildNumber)
-      ls -1
+      #ls -1
