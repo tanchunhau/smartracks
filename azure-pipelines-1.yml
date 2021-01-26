@@ -28,6 +28,10 @@ resources:
     type: github
     name: ni/meta-smartracks
     endpoint: SmartRacks
+ - repository: smartracks-manifest
+    type: github
+    name: ni/smartracks-manifest
+    endpoint: SmartRacks
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracks-build:0
@@ -51,8 +55,8 @@ jobs:
   - script: |
       echo "--Here TCH 2021--"
       #repo init -u https://github.com/NI-SmartRack/smartrack-manifest.git -b main -m smartrack-manifest.xml
-      #repo sync
-      # . export
+      repo sync
+       . export
       #bitbake smartrack-minimal-image
       cd /mnt/nirvana/perforceExports/smartracks/testing123
       # mkdir -p build-$(Build.BuildNumber)
