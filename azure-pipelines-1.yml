@@ -57,7 +57,7 @@ jobs:
       #repo init -m smartracks-manifest.xml
       repo sync
       . export
-      bitbake smartracks-minimal-image
+      bitbake smartrack-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       cp deploy/images/apalis-imx8x/toradexlinux.tng /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
