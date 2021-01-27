@@ -62,9 +62,9 @@ jobs:
       cd smartracks-manifest-private
       echo "--1--"
       ls -1
-      #repo init -m smartracks-manifest.xml
-      #repo sync
-      #. export
+      repo init -m smartracks-manifest.xml
+      repo sync
+      . export
       #bitbake smartrack-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
