@@ -28,6 +28,10 @@ resources:
     type: github
     name: ni/smartracks-manifest
     endpoint: SmartRacks
+  - repository: HatsyRei-smartracks-manifest
+    type: github
+    name: HatsyRei/smartracks-manifest-private
+    endpoint: SmartRacks
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracks-build:0
@@ -48,19 +52,19 @@ jobs:
   steps:
   - checkout: self
     submodules: true
-  - checkout: smartracks-manifest
+  - checkout: HatsyRei-smartracks-manifest
   - script: |
       echo "--Here TCH 20--"
       ls -1
-      repo init -u https://github.com/HatsyRei/smartracks-manifest.git -b main -m smartracks-manifest.xml
+      #repo init -u https://github.com/HatsyRei/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cd ~/bin/repo/smartracks-manifest
       #repo init -m smartracks-manifest.xml
-      repo sync
-      . export
-      bitbake smartrack-minimal-image
+      #repo sync
+      #. export
+      #bitbake smartrack-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
-      mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
-      cp deploy/images/apalis-imx8x/toradexlinux.tng /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
-      cp deploy/images/apalis-imx8x/Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_5.1.0-devel-20201222130932+build.0.tar /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
-      ls -1
+      #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      #cp deploy/images/apalis-imx8x/toradexlinux.tng /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      #cp deploy/images/apalis-imx8x/Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_5.1.0-devel-20201222130932+build.0.tar /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      #ls -1
