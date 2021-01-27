@@ -58,10 +58,10 @@ jobs:
       ls -1
       #repo init -u https://github.com/HatsyRei/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      #cd ~/bin/repo/smartracks-manifest
-      #repo init -m smartracks-manifest.xml
-      #repo sync
-      #. export
+      cd ~/bin/repo/smartracks-manifest-private
+      repo init -m smartracks-manifest.xml
+      repo sync
+      . export
       #bitbake smartrack-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
