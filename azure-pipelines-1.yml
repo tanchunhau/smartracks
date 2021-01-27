@@ -52,9 +52,9 @@ jobs:
   - script: |
       echo "--Here TCH 20--"
       ls -1
-      #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      cd ~/bin/repo/smartracks-manifest
-      repo init -m smartracks-manifest.xml
+      repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
+      #cd ~/bin/repo/smartracks-manifest
+      #repo init -m smartracks-manifest.xml
       repo sync
       . export
       bitbake smartracks-minimal-image
