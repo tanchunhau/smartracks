@@ -56,7 +56,7 @@ jobs:
       cd ~/bin/repo/smartracks-manifest
       repo init -m smartracks-manifest.xml
       repo sync
-      cd ..
+      #cd ..
       . export
       ls -1
       #bitbake smartrack-minimal-image
