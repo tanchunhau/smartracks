@@ -50,26 +50,25 @@ jobs:
     submodules: true
   - checkout: smartracks-manifest
   - script: |
-      echo "--Here TCH 21--"
+       echo "--Here TCH 20--"
       ls -1
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cp smartracks-manifest/smartracks-manifest.xml .repo/local_manifest.xml
       cd ~/bin/repo/smartracks-manifest
-      repo init -m smartracks-manifest.xml
       #git init
       #git add smartracks-manifest.xml
-      #repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
+      repo init -m smartracks-manifest.xml
       
       echo "--1--"
       ls -1
       repo sync
       echo "--2--"
       ls -1
-      #cd ..
-      #. export
+      cd ..
+      . export
       echo "--3--"
-      #ls -1
-      #bitbake smartracks-minimal-image
+      ls -1
+      #bitbake smartrack-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       # mkdir -p build-$(Build.BuildNumber)
-      ls -1
+      #ls -1
