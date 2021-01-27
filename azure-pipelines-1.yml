@@ -20,14 +20,14 @@ trigger:
      
 resources:
   repositories:
-  - repository: rcu-service
-    type: github
-    name: NI-SmartRack/rcu-service
-    endpoint: SmartRacks
-  - repository: smartracks-manifest
-    type: github
-    name: ni/smartracks-manifest
-    endpoint: SmartRacks
+  #- repository: rcu-service
+   # type: github
+    #name: NI-SmartRack/rcu-service
+    #endpoint: SmartRacks
+  #- repository: smartracks-manifest
+   # type: github
+    #name: ni/smartracks-manifest
+    #endpoint: SmartRacks
   - repository: HatsyRei-smartracks-manifest
     type: github
     name: HatsyRei/smartracks-manifest-private
