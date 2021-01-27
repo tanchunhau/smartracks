@@ -64,7 +64,9 @@ jobs:
       cd ~/bin/repo/smartracks-manifest-private
       echo "--2--"
       ls -1
-      
+      cd ~/bin/repo/smartracks-manifest-private/smartracks-manifest-private
+      echo "--3--"
+      ls -1
       #repo init -m smartracks-manifest.xml
       #repo sync
       #. export
