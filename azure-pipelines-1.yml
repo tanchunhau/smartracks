@@ -60,7 +60,7 @@ jobs:
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
       cd ~/bin/repo/smartracks-manifest-private
       echo "--1--"
-      ls ~/bin/repo/smartracks-manifest-private -1
+      ls ~/bin/repo/smartracks -1
       #repo init -m smartracks-manifest.xml
       #repo sync
       #. export
