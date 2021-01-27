@@ -54,10 +54,11 @@ jobs:
       ls -1
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cp smartracks-manifest/smartracks-manifest.xml .repo/local_manifest.xml
-      #cd ~/bin/repo/smartracks-manifest
+      cd ~/bin/repo/smartracks-manifest
+      repo init -m smartracks-manifest.xml
       #git init
       #git add smartracks-manifest.xml
-      repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
+      #repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       
       echo "--1--"
       ls -1
@@ -68,7 +69,7 @@ jobs:
       . export
       echo "--3--"
       ls -1
-      #bitbake smartrack-minimal-image
+      bitbake smartracks-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       # mkdir -p build-$(Build.BuildNumber)
-      #ls -1
+      ls -1
