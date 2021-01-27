@@ -66,10 +66,10 @@ jobs:
       echo "--2--"
       ls -1
       #cd ..
-      . export
+      #. export
       echo "--3--"
-      ls -1
-      bitbake smartracks-minimal-image
+      #ls -1
+      #bitbake smartracks-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       # mkdir -p build-$(Build.BuildNumber)
       ls -1
