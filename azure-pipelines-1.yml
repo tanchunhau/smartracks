@@ -24,14 +24,14 @@ resources:
    # type: github
     #name: NI-SmartRack/rcu-service
     #endpoint: SmartRacks
-  #- repository: smartracks-manifest
-   # type: github
-    #name: ni/smartracks-manifest
-    #endpoint: SmartRacks
-  - repository: HatsyRei-smartracks-manifest
+  - repository: smartracks-manifest
     type: github
-    name: HatsyRei/smartracks-manifest-private
+    name: ni/smartracks-manifest
     endpoint: SmartRacks
+ # - repository: HatsyRei-smartracks-manifest
+ #   type: github
+  #  name: HatsyRei/smartracks-manifest-private
+   # endpoint: SmartRacks
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracks-build:0
@@ -52,7 +52,7 @@ jobs:
   steps:
   - checkout: self
     submodules: true
-  - checkout: HatsyRei-smartracks-manifest
+  - checkout: smartracks-manifest
   - script: |
       echo "--Here TCH 20--"
       ls -1
@@ -62,7 +62,7 @@ jobs:
       #cd smartracks-manifest-private
       echo "--1--"
       ls -1
-      repo init -m ~/bin/repo/smartracks-manifest-private/smartracks-manifest.xml
+      repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       repo sync
       . export
       #bitbake smartrack-minimal-image
