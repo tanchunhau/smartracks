@@ -58,11 +58,11 @@ jobs:
       ls -1
       #repo init -u https://github.com/HatsyRei/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      cd ~/bin/repo/smartracks-manifest-private
+      #cd ~/bin/repo/smartracks-manifest-private
       #cd smartracks-manifest-private
       echo "--1--"
       ls -1
-      repo init -m smartracks-manifest.xml
+      repo init -m ~/bin/repo/smartracks-manifest-private/smartracks-manifest.xml
       repo sync
       . export
       #bitbake smartrack-minimal-image
