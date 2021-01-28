@@ -19,7 +19,7 @@ trigger:
 #     - main
      
 resources:
-  repositories:
+  #repositories:
   #- repository: rcu-service
    # type: github
     #name: NI-SmartRack/rcu-service
