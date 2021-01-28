@@ -52,7 +52,7 @@ jobs:
   steps:
   - checkout: self
     submodules: true
-  - checkout: smartracks-manifest
+  #- checkout: smartracks-manifest
   - script: |
       echo "--Here TCH 2021--"
       ls -1
