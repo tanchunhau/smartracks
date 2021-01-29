@@ -50,8 +50,8 @@ jobs:
       - Agent.OS -equals Linux
   
   steps:
-  #- checkout: self
-  #  submodules: true
+  - checkout: self
+    submodules: true
   - checkout: smartracks-manifest
   - script: |
       echo "--Here TCH 1--"
@@ -59,7 +59,7 @@ jobs:
       #repo init -u https://github.com/HatsyRei/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      cd ~/bin/repo/smartracks-manifest
+      #cd ~/bin/repo/smartracks-manifest
       echo "--1--"
       ls -1
       repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
