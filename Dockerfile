@@ -5,7 +5,7 @@ ARG	DEBIAN_FRONTEND=noninteractive
 ARG     UHD_TAG=v3.14.0.0
 ARG     MAKEWIDTH=2
 
-#install dependencies
+#Install dependencies
 RUN	apt-get update && apt-get install -y apt-utils
 RUN	apt-get -y install 	gawk wget git diffstat unzip texinfo gcc-multilib \
 				build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
