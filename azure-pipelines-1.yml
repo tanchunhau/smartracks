@@ -58,19 +58,18 @@ jobs:
       ls -1
       #repo init -u https://github.com/HatsyRei/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
+      repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cd ~/bin/repo/smartracks-manifest
       echo "--1--"
       ls -1
-      repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
+      #repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       repo sync
       echo "--2--"
-      cd ..
       ls -1
       . export
       bitbake smartracks-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
-      #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
-      #cp deploy/images/apalis-imx8x/toradexlinux.tng /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
-      #cp deploy/images/apalis-imx8x/Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_5.1.0-devel-20201222130932+build.0.tar /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      cp deploy/images/apalis-imx8x/toradexlinux.tng /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      cp deploy/images/apalis-imx8x/Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_5.1.0-devel-20201222130932+build.0.tar /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       #ls -1 
