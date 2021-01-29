@@ -69,6 +69,8 @@ jobs:
       . export
       bitbake smartracks-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
+       echo "--2--"
+      ls -1
       mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       cp deploy/images/apalis-imx8x/toradexlinux.tng /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       cp deploy/images/apalis-imx8x/Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_5.1.0-devel-20201222130932+build.0.tar /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
