@@ -59,15 +59,13 @@ jobs:
       #repo init -u https://github.com/HatsyRei/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      #cd ~/bin/repo/smartracks-manifest
-      #cd smartracks-manifest-private
+      cd ~/bin/repo/smartracks-manifest
       echo "--1--"
       ls -1
       #repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
-      repo init -m smartracks-manifest.xml
-      repo sync
-      . export
-      bitbake smartracks-minimal-image
+      #repo sync
+      #. export
+      #bitbake smartracks-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       #cp deploy/images/apalis-imx8x/toradexlinux.tng /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
