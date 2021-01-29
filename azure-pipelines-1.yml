@@ -19,19 +19,19 @@ trigger:
 #     - main
      
 resources:
-  #repositories:
-  #- repository: rcu-service
-   # type: github
-    #name: NI-SmartRack/rcu-service
-    #endpoint: SmartRacks
-  #- repository: smartracks-manifest
-   # type: github
-    #name: ni/smartracks-manifest
-    #endpoint: SmartRacks
- # - repository: HatsyRei-smartracks-manifest
- #   type: github
-  #  name: HatsyRei/smartracks-manifest-private
-   # endpoint: SmartRacks
+  repositories:
+  - repository: rcu-service
+    type: github
+    name: tanchunhau/rcu-service
+    endpoint: SmartRacks
+  - repository: smartracks-manifest
+    type: github
+    name: tanchunhau/smartracks-manifest
+    endpoint: SmartRacks
+  - repository: meta-smartracks
+    type: github
+    name: tanchunhau/meta-smartracks
+    endpoint: SmartRacks
   containers:
   - container: smartracks-build
     image: rnd-builds.repos.natinst.com/smartracks/smartracks-build:0
@@ -50,23 +50,23 @@ jobs:
       - Agent.OS -equals Linux
   
   steps:
-  - checkout: self
-    submodules: true
-  #- checkout: smartracks-manifest
+  #- checkout: self
+  #  submodules: true
+  - checkout: smartracks-manifest
   - script: |
-      echo "--Here TCH 2021--"
+      echo "--Here TCH 1--"
       ls -1
       #repo init -u https://github.com/HatsyRei/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init -u https://github.com/ni/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      #cd ~/bin/repo/smartracks-manifest-private
+      #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
+      #cd ~/bin/repo/smartracks-manifest
       #cd smartracks-manifest-private
       echo "--1--"
       ls -1
-      #repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
+      repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       repo sync
       . export
-      #bitbake smartracks-minimal-image
+      bitbake smartracks-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
       #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       #cp deploy/images/apalis-imx8x/toradexlinux.tng /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
