@@ -64,6 +64,8 @@ jobs:
       ls -1
       repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       repo sync
+      echo "--2--"
+      ls -1
       . export
       bitbake smartracks-minimal-image
       #cd /mnt/nirvana/perforceExports/smartracks/testing123
