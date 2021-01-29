@@ -16,7 +16,7 @@ RUN	apt-get -y install 	gawk wget git diffstat unzip texinfo gcc-multilib \
 				mercurial automake groff curl lzop asciidoc u-boot-tools dos2unix mtd-utils pv \
 				libncurses5 libncurses5-dev libncursesw5-dev libelf-dev zlib1g-dev bc
 
-#Set System Locales																
+#Install System Locales																
 RUN	apt-get -y install locales
 RUN 	dpkg-reconfigure -f noninteractive locales
 RUN 	echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && locale-gen en_US.UTF-8
@@ -31,6 +31,6 @@ RUN 	mv ~/bin/repo /usr/local/bin/repo
 RUN	mkdir -p /home/oe-builder
 RUN 	git config --global user.name "ni-smartracks-builder"
 RUN	git config --global user.email ni-smartracks-builder@hotmail.com
-WORKDIR /home/oe-builder
 
+WORKDIR /home/oe-builder
 ENV 	LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
